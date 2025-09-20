@@ -1,0 +1,30 @@
+/* Layout mínimo e responsivo: centraliza a logo em desktop e mobile */
+html, body { height: 100%; }
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  display: grid;
+  place-items: center;
+  background: #ffffff;
+  color: #333;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+.wrap {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  padding: 4vh 4vw;
+}
+.logo {
+  width: clamp(220px, 40vw, 560px);
+  height: auto;
+}
+/* Acessibilidade: título visivelmente escondido para leitores de tela */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0);
+  white-space: nowrap; border: 0;
+}
